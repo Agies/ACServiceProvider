@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE7152E1A011EB732F25FA36 /* Pods_ACServiceProviderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD656ECCD42B932160D67AEC /* Pods_ACServiceProviderTests.framework */; };
+		C3B3C5931CB4CBD10075C57A /* ACServiceProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = C3B3C5921CB4CBD10075C57A /* ACServiceProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3B3C59A1CB4CBD10075C57A /* ACServiceProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B3C58F1CB4CBD10075C57A /* ACServiceProvider.framework */; };
+		C3B3C5AA1CB4CC130075C57A /* ACServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B3C5A91CB4CC130075C57A /* ACServiceProvider.swift */; };
+		C3B3C5AD1CB4CC440075C57A /* ACServiceProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B3C5AC1CB4CC440075C57A /* ACServiceProviderTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3B3C59B1CB4CBD10075C57A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B3C5861CB4CBD10075C57A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3B3C58E1CB4CBD10075C57A;
+			remoteInfo = ACServiceProvider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38A4DFF874CDB46957E23B01 /* Pods-ACServiceProviderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACServiceProviderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACServiceProviderTests/Pods-ACServiceProviderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E9BFF7E74569832D868ED39 /* Pods-ACServiceProviderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACServiceProviderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACServiceProviderTests/Pods-ACServiceProviderTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3B3C58F1CB4CBD10075C57A /* ACServiceProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACServiceProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B3C5921CB4CBD10075C57A /* ACServiceProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACServiceProvider.h; sourceTree = "<group>"; };
+		C3B3C5941CB4CBD10075C57A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3B3C5991CB4CBD10075C57A /* ACServiceProviderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACServiceProviderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B3C5A01CB4CBD10075C57A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3B3C5A91CB4CC130075C57A /* ACServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACServiceProvider.swift; sourceTree = "<group>"; };
+		C3B3C5AC1CB4CC440075C57A /* ACServiceProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACServiceProviderTests.swift; sourceTree = "<group>"; };
+		FD656ECCD42B932160D67AEC /* Pods_ACServiceProviderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACServiceProviderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3B3C58B1CB4CBD10075C57A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B3C5961CB4CBD10075C57A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B3C59A1CB4CBD10075C57A /* ACServiceProvider.framework in Frameworks */,
+				BE7152E1A011EB732F25FA36 /* Pods_ACServiceProviderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08DBD6EA5884CFB204C87F2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD656ECCD42B932160D67AEC /* Pods_ACServiceProviderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F3318F7C37CCCBD57030534 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38A4DFF874CDB46957E23B01 /* Pods-ACServiceProviderTests.debug.xcconfig */,
+				7E9BFF7E74569832D868ED39 /* Pods-ACServiceProviderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3B3C5851CB4CBD10075C57A = {
+			isa = PBXGroup;
+			children = (
+				C3B3C5911CB4CBD10075C57A /* ACServiceProvider */,
+				C3B3C59D1CB4CBD10075C57A /* ACServiceProviderTests */,
+				C3B3C5901CB4CBD10075C57A /* Products */,
+				0F3318F7C37CCCBD57030534 /* Pods */,
+				08DBD6EA5884CFB204C87F2D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C3B3C5901CB4CBD10075C57A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3B3C58F1CB4CBD10075C57A /* ACServiceProvider.framework */,
+				C3B3C5991CB4CBD10075C57A /* ACServiceProviderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3B3C5911CB4CBD10075C57A /* ACServiceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				C3B3C5921CB4CBD10075C57A /* ACServiceProvider.h */,
+				C3B3C5A91CB4CC130075C57A /* ACServiceProvider.swift */,
+				C3B3C5941CB4CBD10075C57A /* Info.plist */,
+			);
+			path = ACServiceProvider;
+			sourceTree = "<group>";
+		};
+		C3B3C59D1CB4CBD10075C57A /* ACServiceProviderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3B3C5AC1CB4CC440075C57A /* ACServiceProviderTests.swift */,
+				C3B3C5A01CB4CBD10075C57A /* Info.plist */,
+			);
+			path = ACServiceProviderTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C3B3C58C1CB4CBD10075C57A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B3C5931CB4CBD10075C57A /* ACServiceProvider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C3B3C58E1CB4CBD10075C57A /* ACServiceProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3B3C5A31CB4CBD10075C57A /* Build configuration list for PBXNativeTarget "ACServiceProvider" */;
+			buildPhases = (
+				C3B3C58A1CB4CBD10075C57A /* Sources */,
+				C3B3C58B1CB4CBD10075C57A /* Frameworks */,
+				C3B3C58C1CB4CBD10075C57A /* Headers */,
+				C3B3C58D1CB4CBD10075C57A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACServiceProvider;
+			productName = ACServiceProvider;
+			productReference = C3B3C58F1CB4CBD10075C57A /* ACServiceProvider.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3B3C5981CB4CBD10075C57A /* ACServiceProviderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3B3C5A61CB4CBD10075C57A /* Build configuration list for PBXNativeTarget "ACServiceProviderTests" */;
+			buildPhases = (
+				46ED0880433D0E4B8D570876 /* Check Pods Manifest.lock */,
+				C3B3C5951CB4CBD10075C57A /* Sources */,
+				C3B3C5961CB4CBD10075C57A /* Frameworks */,
+				C3B3C5971CB4CBD10075C57A /* Resources */,
+				92A00AA7AE92BA38A480DFA8 /* Embed Pods Frameworks */,
+				A62CF620463DB32C448F143B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3B3C59C1CB4CBD10075C57A /* PBXTargetDependency */,
+			);
+			name = ACServiceProviderTests;
+			productName = ACServiceProviderTests;
+			productReference = C3B3C5991CB4CBD10075C57A /* ACServiceProviderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3B3C5861CB4CBD10075C57A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = agiescode;
+				TargetAttributes = {
+					C3B3C58E1CB4CBD10075C57A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					C3B3C5981CB4CBD10075C57A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = C3B3C5891CB4CBD10075C57A /* Build configuration list for PBXProject "ACServiceProvider" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3B3C5851CB4CBD10075C57A;
+			productRefGroup = C3B3C5901CB4CBD10075C57A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3B3C58E1CB4CBD10075C57A /* ACServiceProvider */,
+				C3B3C5981CB4CBD10075C57A /* ACServiceProviderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3B3C58D1CB4CBD10075C57A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B3C5971CB4CBD10075C57A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46ED0880433D0E4B8D570876 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		92A00AA7AE92BA38A480DFA8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACServiceProviderTests/Pods-ACServiceProviderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A62CF620463DB32C448F143B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACServiceProviderTests/Pods-ACServiceProviderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3B3C58A1CB4CBD10075C57A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B3C5AA1CB4CC130075C57A /* ACServiceProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B3C5951CB4CBD10075C57A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B3C5AD1CB4CC440075C57A /* ACServiceProviderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3B3C59C1CB4CBD10075C57A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3B3C58E1CB4CBD10075C57A /* ACServiceProvider */;
+			targetProxy = C3B3C59B1CB4CBD10075C57A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C3B3C5A11CB4CBD10075C57A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C3B3C5A21CB4CBD10075C57A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C3B3C5A41CB4CBD10075C57A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ACServiceProvider/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.agiescode.ACServiceProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C3B3C5A51CB4CBD10075C57A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ACServiceProvider/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.agiescode.ACServiceProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C3B3C5A71CB4CBD10075C57A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38A4DFF874CDB46957E23B01 /* Pods-ACServiceProviderTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ACServiceProviderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.agiescode.ACServiceProviderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C3B3C5A81CB4CBD10075C57A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E9BFF7E74569832D868ED39 /* Pods-ACServiceProviderTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ACServiceProviderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.agiescode.ACServiceProviderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3B3C5891CB4CBD10075C57A /* Build configuration list for PBXProject "ACServiceProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B3C5A11CB4CBD10075C57A /* Debug */,
+				C3B3C5A21CB4CBD10075C57A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3B3C5A31CB4CBD10075C57A /* Build configuration list for PBXNativeTarget "ACServiceProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B3C5A41CB4CBD10075C57A /* Debug */,
+				C3B3C5A51CB4CBD10075C57A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3B3C5A61CB4CBD10075C57A /* Build configuration list for PBXNativeTarget "ACServiceProviderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B3C5A71CB4CBD10075C57A /* Debug */,
+				C3B3C5A81CB4CBD10075C57A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3B3C5861CB4CBD10075C57A /* Project object */;
+}
