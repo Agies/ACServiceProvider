@@ -149,12 +149,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3B3C5A61CB4CBD10075C57A /* Build configuration list for PBXNativeTarget "ACServiceProviderTests" */;
 			buildPhases = (
-				46ED0880433D0E4B8D570876 /* Check Pods Manifest.lock */,
 				C3B3C5951CB4CBD10075C57A /* Sources */,
 				C3B3C5961CB4CBD10075C57A /* Frameworks */,
 				C3B3C5971CB4CBD10075C57A /* Resources */,
-				92A00AA7AE92BA38A480DFA8 /* Embed Pods Frameworks */,
-				A62CF620463DB32C448F143B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,54 +215,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		46ED0880433D0E4B8D570876 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		92A00AA7AE92BA38A480DFA8 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACServiceProviderTests/Pods-ACServiceProviderTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A62CF620463DB32C448F143B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACServiceProviderTests/Pods-ACServiceProviderTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3B3C58A1CB4CBD10075C57A /* Sources */ = {
