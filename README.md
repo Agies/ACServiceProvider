@@ -11,59 +11,59 @@ Simple Swift Service Provider
 
 ###Instance Of Class Type
 
-'''swift
+```swift
 // Registers an instance of the Type MyCoolType
 provider.registerInstance(MyCoolType())
-'''
+```
 
 ###Instance Of Specified Type
 
-'''swift
+```swift
 // Registers an instance of MyCoolType as Type AnyObject
 provider.registerInstanceOf(AnyObject.self, obj: MyCoolType())
-'''
+```
 
 ###Instance Of Declared Type
 
-'''swift
+```swift
 // Registers an instance of MyCoolType as Type AnyObject
 let instance: AnyObject = MyCoolType()
 provider.registerInstance(instance)
-'''
+```
 
 ###Transient Factory of Specified Type
 
-'''swift
+```swift
 // Registers a factory that will generate a new MyCoolType on each Get
 provider.registerType({ (provider) -> MyCoolType in
     return MyCoolType()
 })
-'''
+```
 
 ###Singleton Factory of Specified Type
 
-'''swift
+```swift
 // Registers a factory that will generate a singleton of MyCoolType on each Get
 provider.registerType({ (provider) -> MyCoolType in
 return MyCoolType()
 }).singleton()
-'''
+```
 
 ##Service Get
 
 ###Instance of Specified Type
 
-'''swift
+```swift
 // Will return the last instance registered for AnyObject, cast to the Specified Type
 let instance = provider.getInstanceOf(AnyObject.self)
-'''
+```
 
 ###Instance of Declared Type
 
-'''swift
+```swift
 // Will return the last instance registered for MyCoolType, cast to the Declared Type
 let instance: MyCoolType = getInstance() 
-'''
+```
 
 ### Carthage
 
