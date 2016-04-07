@@ -4,11 +4,20 @@ xcode_workspace: ACServiceProvider.xcworkspace
 xcode_scheme: ACServiceProvider
 xcode_sdk: iphonesimulator9.2
 env:
-  global: 
-    - FRAMEWORK_NAME=ACServiceProvider
+  global:
+  - FRAMEWORK_NAME=ACServiceProvider
 before_install:
-  - brew update
-  - brew install carthage
+- brew update
+- brew install carthage
 before_deploy:
-  - carthage build --no-skip-current
-  - carthage archive $FRAMEWORK_NAME
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: o66eqieBJqK2Hgi+C2Eig8HueBzsm2f3PsZo/124U2ld70p/n+1Ytc4Oig+B03PXJhXwad2hfsFgefSTKFiuozvrsYpoxFTFFw2ACQ7Ba5ea16BtdS1yKihWIA4qTZWubhPeBmYCxE634kaxZH/R5IsxTUYLXNKWyZ4IykEo8L291Iw9AiC8JgMdi78s0Fh7h7CEIkz/8VWy8Nwx6F6vHEZz2NVnDkx3hw1wxEHEy9nmyRoIIJo/yRFha88i9oBnyfYugW9Ib9Fgw93d+DvbM6NkqaORoQi7WWc+3ACca5Aufk+IRgM8nbg3Fp08MNqBs23Eqh4a5V32cXIWCxrw4g+jIb1iBEVSP4ARNZnzjsfNq8dv2WvvYAhZNg62bGwBoAMUlvpAM2vpvkCCWtbsT4dQEoEIRQwpPsUCLEeCWka3lSvRjhTTLNuIh53+dTH3+eIxNZFObQSuije697nr+gGK5NThoI8m5tHy27/yzfu0IXh46bUk+vBiJ+hmcUYyzOZ3RJrX1BWapnIIxHBQd6/SdBsHH/CI9K4CbB+zPOWfk163ia0vGmvB6IwSBlwM5P58cZar3iQAYsWAMrB6Wy8mTWmLSekJFPeqeMAkJmaABRK3ChhNkCtZw8MTEpOU60uqZ8S47JXFpJQMY+I2PL83wSkdYhdq/fs2WvxzHZ0=
+  file: "$FRAMEWORK_NAME.framework.zip"
+  skip_cleanup: true
+  on:
+    repo: Agies/ACServiceProvider
+    tags: true
