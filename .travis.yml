@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode7.3
 xcode_workspace: ACServiceProvider.xcworkspace
 xcode_scheme: ACServiceProvider
-xcode_sdk: iphonesimulator9.3
+xcode_sdk: iphonesimulator9.2
 env:
   global:
   - FRAMEWORK_NAME=ACServiceProvider
