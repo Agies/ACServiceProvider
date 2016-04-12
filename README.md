@@ -21,6 +21,8 @@ provider.registerInstance(MyCoolType())
 ```swift
 // Registers an instance of MyCoolType as Type AnyObject
 provider.registerInstanceOf(AnyObject.self, obj: MyCoolType())
+
+provider.registerInstanceOf(AnyObject.self, obj: MyCoolType(), name: "MyName")
 ```
 
 ###Instance Of Declared Type
@@ -29,6 +31,8 @@ provider.registerInstanceOf(AnyObject.self, obj: MyCoolType())
 // Registers an instance of MyCoolType as Type AnyObject
 let instance: AnyObject = MyCoolType()
 provider.registerInstance(instance)
+
+provider.registerInstance(instance, name: "NamedInstance")
 ```
 
 ###Transient Factory of Specified Type
@@ -38,6 +42,10 @@ provider.registerInstance(instance)
 provider.registerType({ (provider) -> MyCoolType in
     return MyCoolType()
 })
+
+provider.registerType("MyName", factory: { (provider) -> MyCoolType in
+    return MyCoolType()
+})
 ```
 
 ###Singleton Factory of Specified Type
@@ -45,8 +53,14 @@ provider.registerType({ (provider) -> MyCoolType in
 ```swift
 // Registers a factory that will generate a singleton of MyCoolType on each Get
 provider.registerType({ (provider) -> MyCoolType in
-return MyCoolType()
+    return MyCoolType()
 }).singleton()
+
+
+provider.registerType("MyName", factory: { (provider) -> NSObject in
+    return NSObject()
+}).singleton()
+
 ```
 
 ##Service Get
@@ -56,6 +70,8 @@ return MyCoolType()
 ```swift
 // Will return the last instance registered for AnyObject, cast to the Specified Type
 let instance = provider.getInstanceOf(AnyObject.self)
+
+let instance = provider.getInstanceOf(AnyObject.self, name: "MyName")
 ```
 
 ###Instance of Declared Type
@@ -63,6 +79,32 @@ let instance = provider.getInstanceOf(AnyObject.self)
 ```swift
 // Will return the last instance registered for MyCoolType, cast to the Declared Type
 let instance: MyCoolType = getInstance() 
+
+let instance: MyCoolType = getInstance(name: "MyName") 
+```
+
+###Get All Instances
+
+```swift
+// By registering many objects for the same Type, you are able to pull each out by name
+// Or, you are able to GetAll objects registered to that Type
+provider.registerInstance("1", name: "0")
+provider.registerInstanceOf(String.self, obj: "2", name: "1")
+provider.registerType("2", factory: { (p) -> String in
+    "3"
+})
+
+let getAll: [String] = provider.getAll()
+
+subject.getInstanceOf(String.self, name: "0") == "1"
+
+subject.getInstanceOf(String.self, name: "1") == "2"
+
+subject.getInstanceOf(String.self, name: "2") == "3"
+
+getAll[0] == "1"
+getAll[1] == "2"
+getAll[2] == "3"
 ```
 
 ### Carthage
@@ -86,6 +128,4 @@ Run `carthage update` to build the framework and drag the built `ACServiceProvid
 
 ##Next
 
-1. Register Named Versions
-2. Register Many Of For a Type
-3. Cocoapods
+1. Cocoapods

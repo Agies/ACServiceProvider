@@ -8,51 +8,75 @@
 
 import Foundation
 
+internal typealias ACProviderFactory = (ACServiceProvider) -> Any
+
 public class ACServiceProvider: NSObject {
-    typealias ACProviderFactory = (ACServiceProvider) -> Any
-    var container = [String: ACProviderFactory]()
-    public func registerInstance<T>(obj:T) -> ACServiceProvider {
-        registerInstanceOf(T.self, obj: obj)
+    var container = [String: [String: ACProviderFactory]]()
+    public func registerInstance<T>(obj:T, name: String = "") -> ACServiceProvider {
+        registerInstanceOf(T.self, obj: obj, name: name)
         return self
     }
     public func registerType<T>(factory: (ACServiceProvider) -> T) -> ACRegistrationContext<T> {
-        let key = createKey(T)
-        container[key] = factory
-        return ACRegistrationContext<T>(key: key, factory: factory, provider: self)
+        return registerType("", factory: factory)
     }
-    public func registerInstanceOf<T>(type: T.Type, obj: T) -> ACServiceProvider  {
+    public func registerType<T>(name: String = "", factory: (ACServiceProvider) -> T) -> ACRegistrationContext<T> {
+        appendToContainerFor(ACServiceProvider.createKey(T), name: name, factory: factory)
+        return ACRegistrationContext<T>(name: name, factory: factory, provider: self)
+    }
+    public func registerInstanceOf<T>(type: T.Type, obj: T, name: String = "") -> ACServiceProvider  {
         let factory : (ACServiceProvider) -> Any = { _ in obj }
-        container[createKey(type)] = factory
+        appendToContainerFor(ACServiceProvider.createKey(T), name: name, factory: factory)
         return self
     }
-    public func getInstanceOf<T>(type: T.Type) -> T? {
-        return container[createKey(type)]?(self) as? T
+    public func getInstanceOf<T>(type: T.Type, name: String = "") -> T? {
+        return container[ACServiceProvider.createKey(type)]?[name]?(self) as? T
     }
-    public func getInstance<T>() -> T? {
-        return getInstanceOf(T)
+    public func getInstance<T>(name: String = "") -> T? {
+        return getInstanceOf(T.self, name: name)
     }
-    private func createKey(type: Any.Type) -> String {
+    public func getAll<T>() -> [T] {
+        var mappedResult = [T]()
+        if let con = container[ACServiceProvider.createKey(T)] {
+            for item in  con {
+                if let result = (item.1(self) as? T) {
+                    mappedResult.append(result)
+                }
+            }
+        }
+        return mappedResult
+    }
+    private func appendToContainerFor(key: String, name: String, factory: ACProviderFactory) -> Int {
+        if container[key] == nil {
+            container[key] = [:]
+        }
+        let index = container[key]!.count
+        container[key]![name] = factory
+        return index
+    }
+    private class func createKey(type: Any.Type) -> String {
         return String(type)
     }
 }
 
 public struct ACRegistrationContext<T> {
     let provider: ACServiceProvider
-    let key: String
+    let name: String
     let factory: (ACServiceProvider) -> T
-    init(key: String, factory: (ACServiceProvider) -> T, provider: ACServiceProvider) {
-        self.key = key
+    init(name: String, factory: (ACServiceProvider) -> T, provider: ACServiceProvider) {
+        self.name = name
         self.factory = factory
         self.provider = provider
     }
     public func singleton() -> ACServiceProvider {
-        provider.container[key] = { p in
+        let key = ACServiceProvider.createKey(T)
+        let factory: ACProviderFactory = { p in
             let result = self.factory(p)
-            p.container[self.key] = { _ in
+            p.container[key] = [self.name: { _ in
                 return result
-            }
+                }]
             return result
         }
+        provider.appendToContainerFor(key, name: name, factory: factory)
         return self.provider
     }
     public func transient() -> ACServiceProvider {
