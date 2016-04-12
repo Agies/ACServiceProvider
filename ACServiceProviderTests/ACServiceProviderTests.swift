@@ -85,9 +85,9 @@ class ACServiceProviderTests: XCTestCase {
         XCTAssertEqual(subject.getInstanceOf(String.self, name: "0"), "1")
         XCTAssertEqual(subject.getInstanceOf(String.self, name: "1"), "2")
         XCTAssertEqual(subject.getInstanceOf(String.self, name: "2"), "3")
-        XCTAssertEqual(getAll[0], "1")
-        XCTAssertEqual(getAll[1], "2")
-        XCTAssertEqual(getAll[2], "3")
+        XCTAssertTrue(getAll.contains("1"))
+        XCTAssertTrue(getAll.contains("2"))
+        XCTAssertTrue(getAll.contains("3"))
     }
     func testIt_should_allow_a_factory_to_be_transient_by_default() {
         subject.registerType({ (provider) -> NSObject in
